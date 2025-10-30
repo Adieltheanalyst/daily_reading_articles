@@ -181,3 +181,5 @@ def main():
 
     send_email(top_articles)
     print("✅ Email sent with 3 top articles!")
+
+main()
