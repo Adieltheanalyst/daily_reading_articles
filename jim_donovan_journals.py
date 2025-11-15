@@ -11,6 +11,7 @@ import sqlite3
 from groq import Groq
 from langchain_groq import ChatGroq
 import pandas as pd
+from datetime import datetime , timedelta
 
 
 def fetch_articles():
@@ -19,7 +20,7 @@ def fetch_articles():
     params={
         "q":"economy OR inflation OR IPO OR earnings OR opinion",
         "language":"en",
-        "page_size":20,
+        "page_size":1000,
         "apikey":api_key
     }
     res= requests.get(url,params=params)
